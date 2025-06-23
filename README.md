@@ -18,7 +18,7 @@ BankMitra is a smart assistant built with 'FastAPI' and 'Groq LLM' that helps us
 
 ```bash
 git clone https://github.com/jatinsuman07/Transactional-Assistant-using-GroqLLM- 
-cd bankmitra
+cd Transactional-Assistant-using-GroqLLM-
 pip install -r requirements.txt
 ```
 

@@ -2,6 +2,7 @@
 BankMitra is a smart assistant built with 'FastAPI' and 'Groq LLM' that helps users perform basic banking operations via natural language.
 
 ## 🚀 Features
+- 🆕 Create account  
 - ✅ Check balance  
 - ➕ Credit money  
 - ➖ Debit money (with PIN)  

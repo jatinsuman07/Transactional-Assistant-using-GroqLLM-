@@ -5,7 +5,7 @@ BankMitra is a smart assistant built with 'FastAPI' and 'Groq LLM' that helps us
 - 🆕 Create account  
 - ✅ Check balance  
 - ➕ Credit money  
-- ➖ Debit money (with PIN)  
+- ➖ Debit money   
 - 🧾 Pay insurance  
 - 📄 View transaction history  
 - 📢 Register complaints  

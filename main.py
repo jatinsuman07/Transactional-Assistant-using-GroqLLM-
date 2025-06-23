@@ -28,7 +28,6 @@ def read_root():
 @app.post("/customer-service/invoke")
 async def invoke(request: InvokeRequest):
     try:
-        # Optional: You can pass config/kwargs if call_llm supports it
         response = call_llm(request.input)  # Modify if needed
         print(response)
         return {"output": response}

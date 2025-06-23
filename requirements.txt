@@ -1,0 +1,7 @@
+faker
+dotenv~=0.9.9
+python-dotenv~=1.1.0
+groq~=0.28.0
+fastapi~=0.115.13
+pydantic~=2.11.7
+uvicorn~=0.34.3

@@ -1,0 +1,10 @@
+{
+    "accounts": {
+        "111111": {
+            "name": "Name",
+            "balance": 8000,
+            "insurance_amount": 1500,
+            "history": []
+        }
+    }
+}

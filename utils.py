@@ -31,44 +31,32 @@ def save_db(db):
     with open(DB_FILE, 'w') as f:
         json.dump(db, f, indent=4)
 
-
 def create_new_account(name):
     db = create_or_load_db()
     try:
-        # Step 1: Load existing DB from file
         with open(NEW_ACC_NUM, 'r') as f:
             new_db = json.load(f)
     except FileNotFoundError:
-        # If file doesn't exist, initialize
         new_db = {
             "acc_num": {"new": []},
             "accounts": {}
         }
-
-    # Step 2: Check if any account number is available
     if not new_db.get("acc_num", {}).get("new"):
         return json.dumps({"error": "No available account numbers!"})
-
-    # Step 3: Extract and remove the first account number
     account_number = new_db["acc_num"]["new"].pop(0)
 
-    # Step 4: Add new account to 'accounts'
     db["accounts"][account_number] = {
         "name": name,
         "balance": 0,
         "insurance_amount": 0,
         "history": []
     }
-    #save account file
     with open(DB_FILE, 'w') as f:
         json.dump(db, f, indent=4)
 
-
-    # Step 5: Save updated DB back to file
     with open(NEW_ACC_NUM, 'w') as f:
         json.dump(new_db, f, indent=4)
 
-    # Step 6: Return response
     return json.dumps({
         "success": "Account registered",
         "account_number": account_number
